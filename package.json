@@ -1,0 +1,25 @@
+{
+  "name": "6-verify-html",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "clear & node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  },
+  "description": "This project is about recognize the errors that any html file can have.",
+  "main": "app.js",
+  "author": "Paco Preciado Mendoza <__pm@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
