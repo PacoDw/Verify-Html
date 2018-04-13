@@ -1,2 +1,10 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Verify html</h1>
+<h3>Please upload your files</h3>
+<form action="/results" method="post" encType="multipart/form-data" id="form">
+    <input type="file" name="myfiles" id="myfiles" multiple="true">
+    <br><br>
+    <input type="submit" id="submit" value="Load">
+    <ul id="ul_files">
+    </ul>
+</form>
+<script src="/assets/javascripts/files.js"></script>
