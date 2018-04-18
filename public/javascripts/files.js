@@ -27,10 +27,12 @@
             xhr.onload = () => {
     
                 if(xhr.status !== 200)
+                {
+                    console.log(xhr.response);
                     alert('Algo salio mal');
+                }
                 else
                 {
-
                     // Selec the ul element from the html
                     let _ul = document.querySelector('#ul_files');
                     
@@ -48,7 +50,7 @@
                         _li.appendChild(_a);
                         _ul.insertBefore(_li, _ul.length);
                     });
-                    
+
                 }
             }
             xhr.open('POST', form.getAttribute('action'));
