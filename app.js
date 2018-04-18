@@ -10,6 +10,9 @@ const resultsRouter = require('./routes/results');
 
 const app = express();
 
+// Data config-------------------------------------------------------------
+require('dotenv').config();
+
 // view engine setup-------------------------------------------------------
 app
     .set('views',`${__dirname}/views`)
@@ -32,7 +35,9 @@ app
 
 // catch 404 and forward to error handler----------------------------------
 app.use(function(req, res, next) {
-  next(createError(404));
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handler------------------------------------------------------------
