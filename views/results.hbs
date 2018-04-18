@@ -6,6 +6,60 @@
   </head>
   <body>
     <h1>Results:</h1>
-    <h3>index: {{id}}</h3>
+    <h3>File name: {{file.name}}</h3>
+    <h3>Content: {{file.content}}</h3>
+    <a href="/">Back</a>
+    <table>
+      <thead>
+        <th>Item</th>
+        <th>Description</th>
+        <th>View</th>
+        <th>Count</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML comments</td>
+          <td>Usully not a big issue, but can occasionnally reveal something useful</td>
+          <td>{{file.htmlComments}}</td>
+          <td>{{file.htmlCount}}</td>
+        </tr>
+        <tr>
+          <td>Application comments </td>
+          <td>There should not be any application commnets visible to the user</td>
+          <td>{{file.appComments}}</td>
+          <td>{{file.appCount}}</td>
+        </tr>
+        <tr>
+          <td>IP address</td>
+          <td>Verify any ip address listed are not regerencing servers.</td>
+          <td>{{file.ipAddress}}</td>
+          <td>{{file.ipCount}}</td>
+        </tr>
+        <tr>
+          <td>E-mail address</td>
+          <td>Make sure private email addresses are not displayed such as a developers</td>
+          <td>{{file.emailAddress}}</td>
+          <td>{{file.emailCount}}</td>
+        </tr>
+        <tr>
+          <td>SQL queries</td>
+          <td>Any queries found in the source of a pages can show the database structure and how queries are constructed</td>
+          <td>{{file.sqlQueries}}</td>
+          <td>{{file.queriesCount}}</td>
+        </tr>
+        <tr>
+          <td>Database connections strings</td>
+          <td>Search for common key words in connections strings</td>
+          <td>{{file.dbConnections}}</td>
+          <td>{{file.connectCount}}</td>
+        </tr>
+        <tr>
+          <td>Hidden input fieds</td>
+          <td>Identify their location to save time</td>
+          <td>{{file.hiddenInputs}}</td>
+          <td>{{file.inputsCount}}</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
