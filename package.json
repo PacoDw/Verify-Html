@@ -10,11 +10,13 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-fileupload": "^0.4.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "mysql": "^2.15.0"
   },
   "description": "This project is about recognize the errors that any html file can have.",
   "main": "app.js",
