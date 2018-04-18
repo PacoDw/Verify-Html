@@ -1,20 +1,34 @@
-var express = require('express');
-var router  = express.Router();
+const express       = require('express');
+const router        = express.Router();
 
 // Resutls page
 router
-      .get('/:id', function(req, res, next) {
-          res.render('results', {title: "Resultados", id:req.params.id});
-      })
+    .get('/:id', (req, res) => {
+        const mysql = require('../db/db-connect');
+        
+        mysql.query('SELECT * FROM verify WHERE name = ?', [req.params.id], (err, results, fileds) =>{
+            if (err) throw err;
 
-      .post('/', (req, res) => {
-        if(!req.files) return res.status(400).send('No files upload');
-
-        // Verify if the request has many elements to return them in a correct array
-        if(req.files.myfiles.length > 1)
-            res.end(JSON.stringify(req.files));
-        else
-            res.end(JSON.stringify({"myfiles":[req.files.myfiles]}));
-      });
+            res.render('results', {title: "Resultados", file: results[0]});
+        });    
+    });
 
 module.exports = router;
+
+
+
+// THIS IMPLEMENTATIONS WAS NOT WORK FOR ME--------------------------------------------- 
+        //     const verifyModel   = require('../db/mysql_connect')
+    //     // console.log(`Entro url: ${req.params.id}`);
+
+    //     verifyModel.find('all', { where: `name = Prueba`}, (err, rows, fields) => {
+    //         if(err) 
+    //         {
+    //             console.log('Hubo un problema')
+    //             throw err;
+    //         }
+    //         console.log(`rows: ${rows}`)
+    //     res.render('results', {title: "Resultados", file: rows[0]});
+    // });
+    //     // next();
+// --------------------------------------------------------------------------------------
