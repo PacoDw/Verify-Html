@@ -1,0 +1,29 @@
+<!--created by __pm@gmail.com -->
+// 192.168.0.136 addres connection
+{{> header}}
+
+<div class='container'>
+    <br><br>
+    <!--primer comentario -->
+    <h3>Welcome!</h3>
+    <input type='hidden' name='primer hidden'>
+    <br>
+    <!-- segundo comentario  -->
+    <A:link></A:link>
+    <Fieldset:d></Fieldset:d>
+    <a href="/team">Our Team</a>
+</div>
+<fieldset disabled="disabled"></table>
+</fieldset>
+
+<input type="text">
+/*Lorem ipsum dolor sit amet consectetur, adipisicing elit...*/
+<input type="text">
+<!-- Select * from tabla where name = 'lupe'-->
+<input type="text">
+<input type="hidden" name="sengundo hidden">
+<input type="text">
+{{> footer-end }}
+// PacoDe@outlook.com
+/**Block coment 192.168.1.198*/
+<!-- connection: server=mysql; Port=3306; Database=testing; user=Paco; Password=myPassword; -->
